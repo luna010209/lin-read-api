@@ -57,7 +57,12 @@ public class OpenApiConfig {
         return (operation, handlerMethod) -> {
             if (shouldAddLanguageHeader(handlerMethod)) {
                 Schema<String> languageSchema = new StringSchema()
-                        ._enum(List.of("en", "ko", "vi", "ja", "zh"))
+                        ._enum(List.of(
+                                "en", "vi", "th", "id", "ms", "tl",
+                                "ko", "ja", "zh", "hi",
+                                "fr", "de", "es", "it", "ru", "nl", "pl",
+                                "pt", "ar", "tr"
+                        ))
                         ._default("en");
 
                 operation.addParametersItem(
