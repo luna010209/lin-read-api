@@ -26,6 +26,7 @@ public class OpenApiConfig {
     public OpenAPI customOpenAPI() {
         List<Tag> tags = new ArrayList<>();
         tags.add(new Tag().name("01. Profile").description("Current user profile from lin-auth-api"));
+        tags.add(new Tag().name("09. Gemini").description("AI generation (text, image, audio)"));
         tags.add(new Tag().name("Root").description("Service info and health"));
 
         return new OpenAPI()

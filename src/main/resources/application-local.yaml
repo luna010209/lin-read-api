@@ -45,3 +45,10 @@ springdoc:
     path: /v3/api-docs
   writer-with-default-pretty-printer: true
   default-produces-media-type: application/json;charset=UTF-8
+
+gemini:
+  api-key: ${GEMINI_APIKEY}
+  models:
+    image: gemini-2.5-flash-image
+    text: gemini-3-flash-preview
+    audio: gemini-2.5-flash-preview-tts

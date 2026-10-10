@@ -7,6 +7,7 @@ plugins {
 ext {
 	JJWT_VERSION = "0.12.6"
 	QUERY_DSL_VERSION = "5.0.0"
+	GOOGLE_GENAI_VERSION = "1.65.0"
 }
 
 group = 'io.lin'
@@ -26,6 +27,7 @@ configurations {
 }
 
 repositories {
+	google()
 	mavenCentral()
 }
 
@@ -37,6 +39,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
 
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.0'
+
+	implementation "com.google.genai:google-genai:$GOOGLE_GENAI_VERSION"
+
+	implementation 'net.coobird:thumbnailator:0.4.20'
+	implementation 'ws.schild:jave-all-deps:3.5.0'
 
 	implementation "io.jsonwebtoken:jjwt-api:$JJWT_VERSION"
 	implementation "io.jsonwebtoken:jjwt-jackson:$JJWT_VERSION"
