@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: lin-read-api
+
+# Shared with lin-auth-api — same JWT secret as auth (:8080); this service listens on :8082
+jwt:
+  secret-key: ${JWT_SECRET_KEY:local-admin-authenticate-secret-key}
+  expiration-minutes: 1200
+  refresh-expiration-minutes: 10080
+
+server:
+  port: 8082
+  tomcat:
+    max-part-count: 50
+
+auth:
+  api:
+    base-url: http://127.0.0.1:8080
